@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <HTML>
-    <HEAD><TITLE> password </TITLE>
-    <style>a{color:white;text-decoration:none}</style>
-    <script language=javascript>
-    
-    function pwChk() {
-        txtPw=document.frm1.pw.value
-        if(txtPw=="1234")
-            document.location.href="home.html" 
-        else
-            alert("당신은 회원이 아니므로 사이트로 접속할 수 없습니다.") }
 
-    function inputChk()
-    {
-        txtPw=isNaN(document.frm1.pw.value)
-        if(txtPw==true)
-        {
-            document.frm1.pw.value=""
-            alert("숫자만 입력하세요!")
+<HEAD>
+    <TITLE> password </TITLE>
+    <style>
+        a {
+            color: white;
+            text-decoration: none
         }
-    }
+    </style>
+    <script language=javascript>
+        function pwChk() {
+            txtPw = document.frm1.pw.value
+            if (txtPw == "1234")
+                document.location.href = "home.html"
+            else
+                alert("당신은 회원이 아니므로 사이트로 접속할 수 없습니다.")
+        }
+        function inputChk() {
+            txtPw = isNaN(document.frm1.pw.value)
+            if (txtPw == true) {
+                document.frm1.pw.value = ""
+                alert("숫자만 입력하세요!")
+            }
+        }
     </script>
-    </HEAD>
-    <BODY text=white bgcolor=wheat leftmargin=0 topmargin=0>
-    <div style="width: 100%; background-color: white"><img src='ZABIVAKA.PNG'></div>
+
+</HEAD>
+
+<BODY text=white bgcolor=wheat leftmargin=0 topmargin=0 onload="startWatch()">
+    <div style="width: 100%; background-color: white">
+        <img src='ZABIVAKA.PNG'>
+    </div>
     <table width=350 border=0>
-    <tr><td align=right><br>
-    <form name=frm1>
-    비밀번호 : <input type="password" size=12 name=pw onkeydown="inputChk()" >
-    <input type="button" value="로그인" onclick="pwChk()">
-    </form>
-    </td>
-    </tr>
+        <tr>
+            <td align=right>
+                <br>
+                <form name=frm1>
+                    비밀번호 :
+                    <input type="password" size=12 name=pw onkeydown="inputChk()">
+                    <input type="button" value="로그인" onclick="pwChk()">
+                </form>
+            </td>
+        </tr>
     </table>
-    </BODY>
+</BODY>
+
 </HTML>
