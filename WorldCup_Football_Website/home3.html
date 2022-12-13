@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>web_programming</title>
+</head>
+<!-- <style>
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
+    body {
+        margin: 0;
+        color: white;
+        font-family: impact, arial black
+    }
+
+    div {
+        font-size: 90pt;
+        word-spacing: -10pt;
+        position: relative;
+        top: 70px;
+        left: 50px;
+    }
+
+    span {
+        font-size: 30pt;
+        position: relative;
+    }
+</style> -->
+<style>
+    #content {
+        /* 중앙 정렬 */
+        width: 960px;
+        margin: 0 auto;
+
+        /* 수평 레이아웃 구성 */
+        overflow: hidden;
+    }
+
+    #content>#main_section {
+        width: 750px;
+        float: left;
+    }
+
+    #content>#main_aside {
+        width: 200px;
+        float: right;
+    }
+</style>
+<style>
+    #main_section>article.main_article {
+        height: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+        border: 1px solid black;
+    }
+</style>
+<style>
+    /* 첫 번째 탭 */
+
+    input:nth-of-type(1) {
+        display: none;
+    }
+
+    input:nth-of-type(1)~div:nth-of-type(1) {
+        display: none;
+    }
+
+    input:nth-of-type(1):checked~div:nth-of-type(1) {
+        display: block;
+    }
+
+    /* 두 번째 탭 */
+
+    input:nth-of-type(2) {
+        display: none;
+    }
+
+    input:nth-of-type(2)~div:nth-of-type(2) {
+        display: none;
+    }
+
+    input:nth-of-type(2):checked~div:nth-of-type(2) {
+        display: block;
+    }
+
+    /* 탭 모양 구성 */
+
+    section.buttons {
+        overflow: hidden;
+    }
+
+    section.buttons>label {
+        /* 수평 정렬 */
+        display: block;
+        float: left;
+
+        /* 크기 및 글자 위치 지정*/
+        width: 100px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+
+        /* 테두리 지정 */
+        box-sizing: border-box;
+        border: 1px solid black;
+
+        /* 색상 지정*/
+        background: white;
+        color: black;
+    }
+
+    input:nth-of-type(1):checked~section.buttons>label:nth-of-type(1) {
+        background: black;
+        color: white;
+    }
+
+    input:nth-of-type(2):checked~section.buttons>label:nth-of-type(2) {
+        background: black;
+        color: white;
+    }
+</style>
+<style type="text/css">
+    a:link {
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:active {
+        color: blue;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: blue;
+        text-decoration: underline;
+    }
+</style>
+<style>
+    .item {
+        overflow: hidden;
+        padding: 10px;
+        border: 1px solid black;
+        border-top: none;
+    }
+
+    .thumbnail {
+        float: left;
+    }
+
+    .description {
+        float: left;
+        margin-left: 10px;
+    }
+
+    .description>strong {
+        display: block;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+</style>
+<style>
+    #main_footer {
+        /* 중앙 정렬 */
+        width: 960px;
+        margin: 0 auto;
+        margin-bottom: 10px;
+
+        /* 테두리 */
+        box-sizing: border-box;
+        padding: 10px;
+        border: 1px solid black;
+
+        /* 글자 정렬 */
+        text-align: center;
+    }
+</style>
+
+<body style="background-color:pink;">
+    <table style="width:100%; height:100%; margin:0; color:white; font-family: impact, arial black;" , rules=all>
+        <tr>
+            <td height:30%>&nbsp;</td>
+        </tr>
+        <tr>
+            <td bgcolor=red>
+                <img src="homebg.PNG" style="width:280px; height:300px;" align=right>
+                <div style="font-size: 90pt; word-spacing: -10pt; position: relative; top: 70px; left: 50px;"> Russia
+                    <span style="top:-50px; font-size:30pt; position: relative;">2018</span> World Cup
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- <table style="width:100%" , rules=all>
+        <tr align=center style="background-color:palevioletred; font-size:25px;">
+            <td width=25%; height=30px;>
+                <a href="worldcup.html">러시아 월드컵에 대해</a>
+            </td>
+            <td width=25%; height=30px;>
+                <a href="info_about_Russia.html">러시아에 대한 소개</a>
+            </td>
+            <td width=25%; height=30px;>
+                <a href="Korea_team.html">대한민국 국가대표 소개</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="trophy.PNG" style="width:100%; height:300px;">
+            </td>
+            <td>
+                <img src="russiapicture.PNG" style="width:100%; height:300px;">
+            </td>
+            <td>
+                <img src="koreasoccer.PNG" style="width:100%; height:300px;">
+            </td>
+        </tr>
+        <tr align=right style="background-color:pink; color:teal; font-size:19px;">
+            <td colspan=3>made by Jaeha</td>
+        </tr>
+    </table> -->
+</body>
+
+<body style="background-color:pink;">
+    <br>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>대한민국 국가대표 소개</h1>
+                <iframe width=100% height=4130px src="Korea_team.html" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+            </article>
+        </section>
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked" />
+            <input id="second" type="radio" name="tab" />
+            <section class="buttons">
+                <label for="first">Another list</label>
+                <label for="second">Detail</label>
+            </section>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="home.html">
+                            <div class="thumbnail">
+                                <img src="trophy.PNG" style="width:100%; height:100px;">
+                            </div>
+                            <div class="description">
+                                <strong>러시아 월드컵</strong>
+                                <p>소개</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="home2.html">
+                            <div class="thumbnail">
+                                <img src="russiapicture.PNG" style="width:100%; height:100px;">
+                            </div>
+                            <div class="description">
+                                <strong>러시아</strong>
+                                <p>소개</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="home3.html">
+                            <div class="thumbnail">
+                                <img src="koreasoccer.PNG" style="width:100%; height:100px;">
+                            </div>
+                            <div class="description">
+                                <strong>대한민국
+                                    <br> 국가대표
+                                </strong>
+                                <p>소개</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="index.html">
+                            <div class="thumbnail">
+                                <img src="ZABIVAKA.PNG" style="width:100%; height:100px;">
+                            </div>
+                            <div class="description">
+                                <strong>홈으로</strong>
+                                <p>로그인하러~</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab_item">
+                <ul>
+                    <li class="item">
+                        <a href="http://www.fifa.com/worldcup/">
+                            <div class="thumbnail">
+                                <img src="fifa.PNG" style="width:100%; height:100px;">
+                            </div>
+                            <div class="description">
+                                <strong>fifa home</strong>
+                                <p>click!</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <footer id="main_footer">
+        <h3>Web_Programming_project</h3>
+        <address>Made By Jaeha</address>
+    </footer>
+</body>
+
+</html>
